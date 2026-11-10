@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}  
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(11, 127, 148);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.card{
+    background-color: rgb(179, 179, 190);
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgb(0, 89, 255);
+}
+
+.card h2 {
+    text-align: center;
+    margin-bottom:20px;
+    color:rgb(0, 0, 0);
+
+}
+
+.grupo-campo {
+    margin-bottom: 15px;
+}
+.grupo-campo label{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+}
+.grupo-campo input{
+    width: 100%;
+    padding: 10px;
+    border: 2px solid rgb(0, 89, 255);
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+.grupo-campo input:focus{
+    border-color: rgb(43, 137, 226);
+    background-color: rgb(14, 190, 137);
+    outline: none;
+}
+.grupo-campo input.campo-valido {
+    border-color:crimson;
+
+}
+/*requisitos das senhas */
+.lista-requisitos {
+    margin-top: 10px;
+    font-size: 12px;
+    list-style:none;
+}
+.requisito {
+    color:rgb(64, 8, 194);
+    margin-bottom: 5px;
+    transition: color 0.3s;
+}
+.requisito::before {
+    content:"\274c";
+    color:gold;
+}
+.requisito.valido::before {
+    content:"\2714"; /*"\2705" ou "\2714")*/
+    color:limegreen;
+}
+.campo-valido{
+    border-color:rgb(56, 105, 6);
+    background-color:rgb(239, 241, 239)
+}
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: rgb(114, 4, 114);
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
