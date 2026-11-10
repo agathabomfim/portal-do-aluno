@@ -1,9 +1,15 @@
 const nomeUsuarioElemento = document.getElementById('nome-usuario');
 const tituloBoasVindas = document.getElementById('titulo-boas-vindas');
 const btnLogout = document.getElementById('btn-logout');
+const cursoAlunoElemento = document.getElementById('curso-aluno');
 
 const dadosSalvos = localStorage.getItem('usuarioCadastrado');
 
+const btnTema = document.getElementById('btn-tema');
+
+btnTema.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+});
 if (!dadosSalvos) {
     alert('Acesso negado! Faça o login primeiro');
     window.location.href = 'login.html';
@@ -13,6 +19,7 @@ if (!dadosSalvos) {
 
     nomeUsuarioElemento.textContent = `Olá, ${nomeExibicao}`;
     tituloBoasVindas.textContent = `Bem Vindo(a), ${nomeExibicao}`;
+    cursoAlunoElemento.textContent= `curso:${usuario.curso}`;
 }
 
 btnLogout.addEventListener('click' , () => {
