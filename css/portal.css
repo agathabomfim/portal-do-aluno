@@ -97,3 +97,25 @@ body {
     color: #28a745;
     margin-bottom: 6px;
 }
+body.dark-mode {
+    background-color: #1e1e1e;
+    color: #ffff;
+
+}
+body.dark-mode .card-info {
+    background-color: #2d2d2d;
+    color: #ffffff;
+}
+.btn-tema {
+    background: transparent;
+    border:none;
+    font-size: 20px;
+    line-height: 1;
+    padding: 4px 6px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+.btn-tema:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
